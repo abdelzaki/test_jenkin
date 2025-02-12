@@ -20,6 +20,8 @@ target_link_libraries(
         GTest::gtest
         GTest::gmock_main
     )
+
+    add_test(${target}_ ${target} )
 # ---
     set(target "gtest_param")
     add_executable(${target} "")
