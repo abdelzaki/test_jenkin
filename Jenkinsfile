@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                ls -l
+                ls -la
                 mkdir -p build
                 cd build
                 cmake ..
