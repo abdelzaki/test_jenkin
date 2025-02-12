@@ -10,7 +10,6 @@ pipeline {
         stage('Build') {
             steps {
                 sh '''
-                ls -la
                 mkdir -p build
                 cd build
                 cmake ..
@@ -18,11 +17,11 @@ pipeline {
                 '''
             }
         }
-    //     stage('Test') {
-    //         steps {
-    //             sh './gradlew check'
-    //         }
-    //     }
+        stage('Test') {
+            steps {
+                sh './bin/gtest_assert'
+            }
+        }
     // }
 
     // post {
