@@ -22,13 +22,13 @@ TEST(TEST_SUIT1, TESTCASE2)
 
 
 // }
-// TEST(TEST_SUIT1, TESTCASE4)
-// {
-//         int x = 2;
-//     int y = 3;
-//     EXPECT_TRUE(int_is_eual(x, y));
+TEST(TEST_SUIT1, TESTCASE4)
+{
+        int x = 2;
+    int y = 3;
+    EXPECT_TRUE(int_is_eual(x, y));
 
-// }
+}
 
 
 // TEST(TEST_SUIT2, TESTCASE1)
