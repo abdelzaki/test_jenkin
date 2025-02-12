@@ -1,13 +1,21 @@
 pipeline {
     agent any
     stages {
+        stage('Checkout') {
+            steps {
+                git branch: 'main',
+
+                    url: 'https://github.com/abdelzaki/test_jenkin.git'
+            }}
         stage('Build') {
             steps {
-                sh """
-                cd build 
-                cmake .. 
+                sh '''
+                ls -l
+                mkdir -p build
+                cd build
+                cmake ..
                 cmake --build .
-                """
+                '''
             }
         }
     //     stage('Test') {
@@ -23,4 +31,4 @@ pipeline {
     //         junit 'build/reports/**/*.xml'
     //     }
     }
-}
+    }
