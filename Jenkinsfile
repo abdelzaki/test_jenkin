@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh './bin/gtest_assert'
+                sh '.build/bin/gtest_assert'
             }
         }
     // }
