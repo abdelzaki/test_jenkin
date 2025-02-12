@@ -20,10 +20,14 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
-                pwd
-                ls
-                ./build/bin/gtest_assert
+                    cd build
+                    ctest -T test --output-junit TestResults.xml
                 '''
+            }
+        }
+        stage('Publish Test Results') {
+            steps {
+                junit 'build/TestResults.xml'
             }
         }
     // }
